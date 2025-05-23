@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uv コマンド チートシート - A3横長</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        @page {
+            size: A3 landscape;
+            margin: 10mm;
+        }
+        
+        body {
+            font-family: 'JetBrains Mono', 'Courier New', monospace;
+            font-size: 9px;
+            line-height: 1.3;
+            color: #2d3748;
+            background: #ffffff;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+            height: 100vh;
+        }
+        
+        .section {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            padding: 6px;
+            margin-bottom: 6px;
+            break-inside: avoid;
+            font-size: 8px;
+        }
+        
+        .header {
+            grid-column: 1 / -1;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 8px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+        
+        .header h1 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        
+        .header p {
+            font-size: 10px;
+            opacity: 0.9;
+        }
+        
+        .section h2 {
+            background: #4a5568;
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 6px;
+            margin: -6px -6px 6px -6px;
+            border-radius: 4px 4px 0 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section h2::before {
+            content: attr(data-icon);
+            margin-right: 4px;
+            font-size: 10px;
+        }
+        
+        .quickstart {
+            grid-column: 1 / 3;
+            background: #e6fffa;
+            border-color: #38b2ac;
+        }
+        
+        .quickstart h2 {
+            background: #38b2ac;
+        }
+        
+        .workflow {
+            grid-column: 3 / -1;
+            background: #f0fff4;
+            border-color: #48bb78;
+        }
+        
+        .workflow h2 {
+            background: #48bb78;
+        }
+        
+        .workflow h3 {
+            color: #2f855a;
+            font-size: 9px;
+            margin: 4px 0 2px 0;
+            font-weight: 600;
+        }
+        
+        .tips {
+            grid-column: 1 / 3;
+            background: #fffaf0;
+            border-color: #ed8936;
+        }
+        
+        .tips h2 {
+            background: #ed8936;
+        }
+        
+        .tips ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .tips li {
+            padding: 1px 0;
+            font-size: 8px;
+        }
+        
+        .tips li::before {
+            content: "💡";
+            margin-right: 4px;
+            font-size: 8px;
+        }
+        
+        .config-section {
+            grid-column: 3 / -1;
+            background: #faf5ff;
+            border-color: #805ad5;
+        }
+        
+        .config-section h2 {
+            background: #805ad5;
+        }
+        
+        .config-section h3 {
+            color: #553c9a;
+            font-size: 9px;
+            margin: 4px 0 2px 0;
+            font-weight: 600;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 4px;
+        }
+        
+        th, td {
+            padding: 2px 4px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 8px;
+            vertical-align: top;
+        }
+        
+        th {
+            background: #edf2f7;
+            font-weight: 600;
+            color: #4a5568;
+        }
+        
+        code {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 1px 3px;
+            border-radius: 2px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 7px;
+            white-space: nowrap;
+        }
+        
+        .code-block {
+            background: #2d3748;
+            color: #e2e8f0;
+            padding: 4px;
+            border-radius: 3px;
+            margin: 3px 0;
+            font-size: 7px;
+            overflow-x: auto;
+            white-space: pre;
+            line-height: 1.2;
+        }
+        
+        /* 特定セクションのサイズ調整 */
+        .project-mgmt { grid-column: 1; }
+        .venv-mgmt { grid-column: 2; }
+        .pkg-mgmt { grid-column: 3; }
+        .python-ver { grid-column: 4; }
+        
+        .uv-run { grid-column: 1; }
+        .tool-mgmt { grid-column: 2; }
+        .uvx-temp { grid-column: 3; }
+        .pip-compat { grid-column: 4; }
+        
+        @media print {
+            body {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .container {
+                height: auto;
+            }
+            
+            .section {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+        }
+        
+        .footer {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 4px;
+            color: #718096;
+            font-size: 8px;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 6px;
+        }
+        
+        /* Export section */
+        .export-section {
+            grid-column: 1;
+            background: #f7fafc;
+            border-color: #4299e1;
+        }
+        
+        .export-section h2 {
+            background: #4299e1;
+        }
+        
+        /* Advanced features */
+        .advanced {
+            grid-column: 2 / 4;
+            background: #fef5e7;
+            border-color: #f6ad55;
+        }
+        
+        .advanced h2 {
+            background: #f6ad55;
+        }
+        
+        .version-info {
+            grid-column: 4;
+            background: #e6ffed;
+            border-color: #68d391;
+            text-align: center;
+        }
+        
+        .version-info h2 {
+            background: #68d391;
+        }
+        
+        .version-info .version-number {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2f855a;
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- ヘッダー -->
+        <div class="header">
+            <h1>🚀 uv コマンド チートシート</h1>
+            <p>超高速 Python パッケージマネージャ - Rust製で10-100倍高速 | A3横長完全版</p>
+        </div>
+        
+        <!-- 第1行：クイックスタート & ワークフロー -->
+        <div class="section quickstart">
+            <h2 data-icon="⚡">クイックスタート</h2>
+            <div class="code-block"># インストール確認
+uv version
+
+# 新規プロジェクト作成
+uv init myproject && cd myproject
+
+# パッケージ追加 + 実行
+uv add numpy pandas matplotlib
+uv run python main.py
+
+# 開発依存関係追加
+uv add --dev pytest ruff black</div>
+        </div>
+        
+        <div class="section workflow">
+            <h2 data-icon="🎯">主要ワークフロー</h2>
+            <h3>🆕 新規プロジェクト</h3>
+            <div class="code-block">uv init myproject && cd myproject
+uv add fastapi uvicorn
+uv run uvicorn main:app --reload</div>
+            
+            <h3>📂 既存プロジェクト</h3>
+            <div class="code-block">cd existing-project
+uv sync  # 依存関係インストール
+uv run python main.py</div>
+            
+            <h3>🧪 テスト環境</h3>
+            <div class="code-block">uv add --dev pytest pytest-cov
+uv run pytest tests/ -v --cov</div>
+            
+            <h3>🚀 デプロイ準備</h3>
+            <div class="code-block">uv lock
+uv export --format requirements.txt > requirements.txt</div>
+        </div>
+        
+        <!-- 第2行：基本コマンド -->
+        <div class="section project-mgmt">
+            <h2 data-icon="📦">プロジェクト管理</h2>
+            <table>
+                <tr><td><code>uv init &lt;name&gt;</code></td><td>新規プロジェクト作成</td></tr>
+                <tr><td><code>uv sync</code></td><td>依存関係インストール</td></tr>
+                <tr><td><code>uv sync --dev</code></td><td>開発依存関係含む</td></tr>
+                <tr><td><code>uv lock</code></td><td>ロックファイル更新</td></tr>
+                <tr><td><code>uv tree</code></td><td>依存関係ツリー表示</td></tr>
+                <tr><td><code>uv check</code></td><td>依存関係検証</td></tr>
+            </table>
+        </div>
+        
+        <div class="section venv-mgmt">
+            <h2 data-icon="🔧">仮想環境管理</h2>
+            <table>
+                <tr><td><code>uv venv</code></td><td>仮想環境作成</td></tr>
+                <tr><td><code>uv venv .venv</code></td><td>指定名で作成</td></tr>
+                <tr><td><code>uv venv --python 3.11</code></td><td>バージョン指定</td></tr>
+                <tr><td><code>uv venv --seed</code></td><td>基本パッケージ含む</td></tr>
+            </table>
+            <div class="code-block"># 有効化
+# Linux/Mac
+source .venv/bin/activate
+
+# Windows
+.\.venv\Scripts\Activate.ps1</div>
+        </div>
+        
+        <div class="section pkg-mgmt">
+            <h2 data-icon="📋">パッケージ管理</h2>
+            <table>
+                <tr><td><code>uv add &lt;pkg&gt;</code></td><td>パッケージ追加</td></tr>
+                <tr><td><code>uv add &lt;pkg&gt;==1.0.0</code></td><td>バージョン指定</td></tr>
+                <tr><td><code>uv add --dev pytest</code></td><td>開発依存として追加</td></tr>
+                <tr><td><code>uv add --optional extra</code></td><td>オプション依存</td></tr>
+                <tr><td><code>uv remove &lt;pkg&gt;</code></td><td>パッケージ削除</td></tr>
+                <tr><td><code>uv remove --dev &lt;pkg&gt;</code></td><td>開発依存削除</td></tr>
+            </table>
+        </div>
+        
+        <div class="section python-ver">
+            <h2 data-icon="🐍">Python管理</h2>
+            <table>
+                <tr><td><code>uv python install 3.11</code></td><td>Pythonインストール</td></tr>
+                <tr><td><code>uv python install 3.12.1</code></td><td>特定バージョン</td></tr>
+                <tr><td><code>uv python list</code></td><td>インストール済み</td></tr>
+                <tr><td><code>uv python find 3.11</code></td><td>パス確認</td></tr>
+                <tr><td><code>uv python pin 3.11</code></td><td>プロジェクト固定</td></tr>
+                <tr><td><code>uv python uninstall 3.10</code></td><td>アンインストール</td></tr>
+            </table>
+        </div>
+        
+        <!-- 第3行：実行コマンド -->
+        <div class="section uv-run">
+            <h2 data-icon="⚡">uv run (推奨)</h2>
+            <div class="code-block"># スクリプト実行
+uv run python script.py
+uv run main.py
+
+# ツール実行
+uv run pytest tests/
+uv run ruff check .
+uv run black .
+uv run mypy src/
+
+# 一時的な依存関係
+uv run --with requests python -c "import requests"
+uv run --with "pandas>=2.0" data_analysis.py</div>
+        </div>
+        
+        <div class="section tool-mgmt">
+            <h2 data-icon="🛠️">ツール管理</h2>
+            <table>
+                <tr><td><code>uv tool install ruff</code></td><td>グローバルツール</td></tr>
+                <tr><td><code>uv tool install --from git+https://...</code></td><td>Git からインストール</td></tr>
+                <tr><td><code>uv tool list</code></td><td>ツール一覧</td></tr>
+                <tr><td><code>uv tool upgrade &lt;tool&gt;</code></td><td>ツール更新</td></tr>
+                <tr><td><code>uv tool uninstall &lt;tool&gt;</code></td><td>ツール削除</td></tr>
+                <tr><td><code>uv tool run &lt;tool&gt;</code></td><td>ツール実行</td></tr>
+            </table>
+        </div>
+        
+        <div class="section uvx-temp">
+            <h2 data-icon="⚡">uvx (一時実行)</h2>
+            <div class="code-block"># パッケージを試す
+uvx cowsay "Hello World"
+uvx httpie GET https://api.github.com
+uvx streamlit hello
+
+# テスト・検証ツール
+uvx pytest
+uvx ruff check .
+uvx mypy src/
+
+# オプション付き
+uvx --with pytest pytest tests/
+uvx --from ruff ruff check
+uvx --isolated python script.py</div>
+        </div>
+        
+        <div class="section pip-compat">
+            <h2 data-icon="🔄">pip 互換</h2>
+            <table>
+                <tr><td><code>uv pip install &lt;pkg&gt;</code></td><td>pip install 互換</td></tr>
+                <tr><td><code>uv pip install -r requirements.txt</code></td><td>requirements</td></tr>
+                <tr><td><code>uv pip install -e .</code></td><td>開発インストール</td></tr>
+                <tr><td><code>uv pip list</code></td><td>パッケージ一覧</td></tr>
+                <tr><td><code>uv pip freeze</code></td><td>requirements出力</td></tr>
+                <tr><td><code>uv pip show &lt;pkg&gt;</code></td><td>パッケージ情報</td></tr>
+            </table>
+        </div>
+        
+        <!-- 第4行：高度な機能 -->
+        <div class="section export-section">
+            <h2 data-icon="📤">エクスポート</h2>
+            <div class="code-block"># requirements.txt
+uv export --format requirements.txt
+
+# ハッシュなし
+uv export --no-hashes
+
+# 開発依存含む
+uv export --dev
+
+# 特定グループのみ
+uv export --only-group test</div>
+        </div>
+        
+        <div class="section advanced">
+            <h2 data-icon="🔬">高度な機能</h2>
+            <h3>🔗依存関係解決</h3>
+            <div class="code-block">uv add --resolution=highest numpy  # 最新バージョン優先
+uv add --prerelease=allow torch    # プレリリース許可</div>
+            
+            <h3>🌐インデックス設定</h3>
+            <div class="code-block">uv add --index-url https://pypi.org/simple/ requests
+uv add --extra-index-url https://test.pypi.org/simple/</div>
+            
+            <h3>📝スクリプトメタデータ (PEP 723)</h3>
+            <div class="code-block"># script.py
+# /// script
+# dependencies = ["requests", "rich"]
+# ///
+
+uv run script.py  # 自動で依存関係解決</div>
+        </div>
+        
+        <div class="section version-info">
+            <h2 data-icon="ℹ️">バージョン情報</h2>
+            <div class="version-number">v0.4.0+</div>
+            <div class="code-block">uv version
+uv --help
+uv &lt;command&gt; --help</div>
+            <p style="margin-top: 8px; font-size: 7px;">
+                <strong>最新機能:</strong><br>
+                • Python 3.13 サポート<br>
+                • Workspace サポート<br>
+                • Lock ファイル v2<br>
+                • Script メタデータ<br>
+                • Tool チェーン管理
+            </p>
+        </div>
+        
+        <!-- 第5行：Tips & 設定 -->
+        <div class="section tips">
+            <h2 data-icon="💡">Pro Tips</h2>
+            <ul>
+                <li><code>uv run</code> は仮想環境を自動作成・使用</li>
+                <li><code>uvx</code> は環境を汚さず一時実行</li>
+                <li><code>--with</code> で一時的な依存関係追加</li>
+                <li>Python バージョンは必要時に自動ダウンロード</li>
+                <li>pip の 10-100倍 高速実行</li>
+                <li>設定ファイル不要でそのまま使用可能</li>
+                <li><code>.python-version</code> ファイルを自動認識</li>
+                <li>Git リポジトリからの直接インストール対応</li>
+            </ul>
+        </div>
+        
+        <div class="section config-section">
+            <h2 data-icon="⚙️">設定ファイル</h2>
+            <h3>📋 pyproject.toml</h3>
+            <div class="code-block">[project]
+name = "myproject"
+version = "0.1.0"
+description = "My awesome project"
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.23.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "ruff>=0.1.0", "black>=23.0"]
+test = ["pytest-cov>=4.0", "httpx>=0.24.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "mypy>=1.5.0",
+]</div>
+            
+            <h3>🐍 .python-version</h3>
+            <div class="code-block">3.11.5</div>
+            
+            <h3>🔧 uv.toml (グローバル設定)</h3>
+            <div class="code-block">[pip]
+index-url = "https://pypi.org/simple"
+extra-index-url = ["https://test.pypi.org/simple"]
+
+[tool-versions]
+python = "3.11"</div>
+        </div>
+        
+        <div class="footer">
+            <strong>uv</strong> - 公式ドキュメント: https://docs.astral.sh/uv/ | GitHub: https://github.com/astral-sh/uv | Created with ❤️ for Python developers
+        </div>
+    </div>
+</body>
+</html>

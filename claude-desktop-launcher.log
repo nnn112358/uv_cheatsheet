@@ -1,0 +1,330 @@
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 13日 火曜日 11:26:21 JST
+Arguments: 
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" ""
+getWindowArguments []
+App is not installed, not enabling auto-updates
+(node:14878) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+[14878:0513/112623.032069:ERROR:mojo/public/cpp/bindings/lib/interface_endpoint_client.cc:725] Message 0 rejected by interface blink.mojom.WidgetHost
+既存のブラウザ セッションで開いています。
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 13日 火曜日 11:27:17 JST
+Arguments: claude://login/google-auth?code=4%2F0AUJR-x6yFWmcVpGx79f_5FN4B5OAz6NWQEOm3d650MbZUzMiHhUiWKa0y_-WFHcNuaFLWg
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" "claude://login/google-auth?code=4%2F0AUJR-x6yFWmcVpGx79f_5FN4B5OAz6NWQEOm3d650MbZUzMiHhUiWKa0y_-WFHcNuaFLWg"
+getWindowArguments []
+claudeURLHandler claude://login/google-auth?code=4%2F0AUJR-x6yFWmcVpGx79f_5FN4B5OAz6NWQEOm3d650MbZUzMiHhUiWKa0y_-WFHcNuaFLWg
+App is not installed, not enabling auto-updates
+(node:15479) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+Electron exited with code: 0
+--- Claude Desktop Launcher End ---
+getWindowArguments []
+config file written
+[14878:0513/114202.025761:ERROR:content/browser/browser_main_loop.cc:278] GLib-GObject: ../../../gobject/gsignal.c:2685: instance '0x53c02abbe50' has no handler with id '3470'
+[14878:0513/114202.183689:ERROR:ui/events/platform/wayland/wayland_event_watcher.cc:47] libwayland: warning: queue 0x53c01e0c5c0 destroyed while proxies still attached:
+
+[14878:0513/114202.183869:ERROR:ui/events/platform/wayland/wayland_event_watcher.cc:47] libwayland:   wl_buffer#53 still attached
+
+[14878:0513/114202.183961:ERROR:ui/events/platform/wayland/wayland_event_watcher.cc:47] libwayland:   wl_buffer#54 still attached
+
+[14878:0513/114202.184029:ERROR:ui/events/platform/wayland/wayland_event_watcher.cc:47] libwayland:   wl_buffer#51 still attached
+
+[14878:0513/114202.184106:ERROR:ui/events/platform/wayland/wayland_event_watcher.cc:47] libwayland:   wl_buffer#52 still attached
+
+[14878:0513/114202.184191:ERROR:ui/events/platform/wayland/wayland_event_watcher.cc:47] libwayland:   wl_buffer#48 still attached
+
+[14878:0513/114202.184347:ERROR:ui/events/platform/wayland/wayland_event_watcher.cc:47] libwayland:   wl_buffer#43 still attached
+
+[14878:0513/114202.184431:ERROR:ui/events/platform/wayland/wayland_event_watcher.cc:47] libwayland:   wl_buffer#47 still attached
+
+[14878:0513/114202.184510:ERROR:ui/events/platform/wayland/wayland_event_watcher.cc:47] libwayland:   wl_shm_pool#45 still attached
+
+Electron exited with code: 0
+--- Claude Desktop Launcher End ---
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 16日 金曜日 01:37:18 JST
+Arguments: 
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" ""
+getWindowArguments []
+App is not installed, not enabling auto-updates
+(node:3024) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+2025-05-16T00:59:32.493Z [filesystem] [error] Server disconnected. For troubleshooting guidance, please visit our [debugging documentation](https://modelcontextprotocol.io/docs/tools/debugging) {"context":"connection"}
+2025-05-16T00:59:32.493Z [error] [filesystem] Server disconnected. For troubleshooting guidance, please visit our [debugging documentation](https://modelcontextprotocol.io/docs/tools/debugging)
+Failed to show toast: Error
+    at t (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:39:5891)
+    at new <anonymous> (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:57439)
+    at u (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:58270)
+    at /usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:57922
+    at t.<anonymous> (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:49851)
+    at t._execute (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:27704)
+    at t.execute (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:27527)
+    at t.flush (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:31916)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  message: 'Timeout has occurred',
+  name: 'TimeoutError',
+  info: { meta: null, lastValue: null, seen: 0 }
+}
+Gdk-Message: 10:23:36.018: Error reading events from display: Broken pipe
+Electron exited with code: 1
+--- Claude Desktop Launcher End ---
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 16日 金曜日 22:53:20 JST
+Arguments: 
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" ""
+getWindowArguments []
+App is not installed, not enabling auto-updates
+(node:24455) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 17日 土曜日 23:59:52 JST
+Arguments: 
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" ""
+getWindowArguments []
+claudeURLHandler /usr/lib/claude-desktop/app.asar
+TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at mI (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:77:6691)
+    at App.<anonymous> (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:124:11568)
+    at App.emit (node:events:518:28)
+    at n.emit (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:28:29445) {
+  code: 'ERR_INVALID_URL',
+  input: '/usr/lib/claude-desktop/app.asar'
+}
+App is not installed, not enabling auto-updates
+(node:262092) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+Electron exited with code: 0
+--- Claude Desktop Launcher End ---
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 19日 月曜日 08:34:36 JST
+Arguments: 
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" ""
+getWindowArguments []
+claudeURLHandler /usr/lib/claude-desktop/app.asar
+TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at mI (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:77:6691)
+    at App.<anonymous> (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:124:11568)
+    at App.emit (node:events:518:28)
+    at n.emit (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:28:29445) {
+  code: 'ERR_INVALID_URL',
+  input: '/usr/lib/claude-desktop/app.asar'
+}
+App is not installed, not enabling auto-updates
+(node:368525) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+Electron exited with code: 0
+--- Claude Desktop Launcher End ---
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 19日 月曜日 09:26:19 JST
+Arguments: 
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" ""
+getWindowArguments []
+claudeURLHandler /usr/lib/claude-desktop/app.asar
+TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at mI (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:77:6691)
+    at App.<anonymous> (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:124:11568)
+    at App.emit (node:events:518:28)
+    at n.emit (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:28:29445) {
+  code: 'ERR_INVALID_URL',
+  input: '/usr/lib/claude-desktop/app.asar'
+}
+App is not installed, not enabling auto-updates
+(node:375514) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+Electron exited with code: 0
+--- Claude Desktop Launcher End ---
+2025-05-19T00:26:39.679Z [filesystem] [error] Server disconnected. For troubleshooting guidance, please visit our [debugging documentation](https://modelcontextprotocol.io/docs/tools/debugging) {"context":"connection"}
+2025-05-19T00:26:39.679Z [error] [filesystem] Server disconnected. For troubleshooting guidance, please visit our [debugging documentation](https://modelcontextprotocol.io/docs/tools/debugging)
+Failed to show toast: Error
+    at t (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:39:5891)
+    at new <anonymous> (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:57439)
+    at u (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:58270)
+    at /usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:57922
+    at t.<anonymous> (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:49851)
+    at t._execute (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:27704)
+    at t.execute (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:27527)
+    at t.flush (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:41:31916)
+    at listOnTimeout (node:internal/timers:588:17)
+    at process.processTimers (node:internal/timers:523:7) {
+  message: 'Timeout has occurred',
+  name: 'TimeoutError',
+  info: { meta: null, lastValue: null, seen: 0 }
+}
+[24455:0519/104903.861296:ERROR:content/common/zygote/zygote_communication_linux.cc:296] Failed to send GetTerminationStatus message to zygote
+[24455:0519/104903.881023:ERROR:content/common/zygote/zygote_communication_linux.cc:296] Failed to send GetTerminationStatus message to zygote
+[24455:0519/104903.882473:ERROR:content/common/zygote/zygote_communication_linux.cc:296] Failed to send GetTerminationStatus message to zygote
+[24455:0519/104903.915460:ERROR:content/browser/network_service_instance_impl.cc:586] Network service crashed, restarting service.
+[24455:0519/104903.926248:ERROR:content/browser/gpu/gpu_process_host.cc:950] GPU process launch failed: error_code=1002
+2025-05-19T01:49:03.939Z [filesystem] [error] Server disconnected. For troubleshooting guidance, please visit our [debugging documentation](https://modelcontextprotocol.io/docs/tools/debugging) {"context":"connection"}
+2025-05-19T01:49:03.939Z [error] [filesystem] Server disconnected. For troubleshooting guidance, please visit our [debugging documentation](https://modelcontextprotocol.io/docs/tools/debugging)
+[24455:0519/104903.942482:ERROR:content/common/zygote/zygote_communication_linux.cc:296] Failed to send GetTerminationStatus message to zygote
+[24455:0519/104903.945271:ERROR:content/browser/gpu/gpu_process_host.cc:950] GPU process launch failed: error_code=1002
+[24455:0519/104903.950075:ERROR:content/browser/gpu/gpu_process_host.cc:950] GPU process launch failed: error_code=1002
+[24455:0519/104903.951548:ERROR:content/browser/gpu/gpu_process_host.cc:950] GPU process launch failed: error_code=1002
+[24455:0519/104903.952459:ERROR:content/browser/gpu/gpu_process_host.cc:950] GPU process launch failed: error_code=1002
+[24455:0519/104903.953355:ERROR:content/browser/gpu/gpu_process_host.cc:950] GPU process launch failed: error_code=1002
+[24455:0519/104903.954347:ERROR:content/browser/gpu/gpu_process_host.cc:950] GPU process launch failed: error_code=1002
+[24455:0519/104903.956703:ERROR:content/browser/gpu/gpu_process_host.cc:950] GPU process launch failed: error_code=1002
+[24455:0519/104903.957623:ERROR:content/browser/gpu/gpu_process_host.cc:950] GPU process launch failed: error_code=1002
+[24455:0519/104903.957660:FATAL:content/browser/gpu/gpu_data_manager_impl_private.cc:416] GPU process isn't usable. Goodbye.
+Electron exited with code: 133
+--- Claude Desktop Launcher End ---
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 19日 月曜日 12:25:49 JST
+Arguments: 
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" ""
+getWindowArguments []
+App is not installed, not enabling auto-updates
+(node:9616) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+[9616:0519/135547.966494:ERROR:ui/events/platform/wayland/wayland_event_watcher.cc:78] Fatal Wayland communication error: Broken pipe.
+[9616:0519/135547.966714:FATAL:electron/shell/browser/electron_browser_main_parts.cc:502] Failed to shutdown.
+[0519/135548.001005:ERROR:third_party/crashpad/crashpad/snapshot/elf/elf_dynamic_array_reader.h:64] tag not found
+[9616:0519/135548.160474:FATAL:dbus/bus.cc:1248] D-Bus connection was disconnected. Aborting.
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 20日 火曜日 14:17:19 JST
+Arguments: 
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" ""
+getWindowArguments []
+App is not installed, not enabling auto-updates
+(node:8401) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+[8467:0520/145620.763595:ERROR:net/socket/ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -200
+[8467:0520/145638.681540:ERROR:net/socket/ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -200
+[8467:0520/145719.640514:ERROR:net/socket/ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -200
+[8467:0520/145855.586567:ERROR:net/socket/ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -200
+[8467:0520/145855.792431:ERROR:net/socket/ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -200
+[8467:0520/145911.562596:ERROR:net/socket/ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -200
+[8467:0520/145942.691953:ERROR:net/socket/ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -200
+Gdk-Message: 15:31:08.550: Error reading events from display: Broken pipe
+Electron exited with code: 1
+--- Claude Desktop Launcher End ---
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 21日 水曜日 06:22:42 JST
+Arguments: 
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" ""
+getWindowArguments []
+App is not installed, not enabling auto-updates
+(node:19748) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+Gdk-Message: 12:27:03.328: Error reading events from display: Broken pipe
+Electron exited with code: 1
+--- Claude Desktop Launcher End ---
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 22日 木曜日 19:05:35 JST
+Arguments: 
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" ""
+getWindowArguments []
+App is not installed, not enabling auto-updates
+(node:266879) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+[266879:0522/190537.333066:ERROR:mojo/public/cpp/bindings/lib/interface_endpoint_client.cc:725] Message 0 rejected by interface blink.mojom.WidgetHost
+[266946:0522/193951.266192:ERROR:net/socket/ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -200
+[266946:0522/194006.938082:ERROR:net/socket/ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -200
+[266946:0522/194046.864545:ERROR:net/socket/ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -200
+[266946:0522/194149.942237:ERROR:net/socket/ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -200
+[266946:0522/194150.148037:ERROR:net/socket/ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -200
+Gdk-Message: 19:46:00.584: Error reading events from display: Broken pipe
+Electron exited with code: 1
+--- Claude Desktop Launcher End ---
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 23日 金曜日 15:54:02 JST
+Arguments: 
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" ""
+getWindowArguments []
+App is not installed, not enabling auto-updates
+(node:3399) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+[3465:0523/175314.255884:ERROR:net/socket/ssl_client_socket_impl.cc:877] handshake failed; returned -1, SSL error code 1, net_error -200
+Gdk-Message: 18:26:50.721: Error reading events from display: Broken pipe
+Electron exited with code: 1
+--- Claude Desktop Launcher End ---
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 23日 金曜日 19:56:25 JST
+Arguments: 
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" ""
+getWindowArguments []
+App is not installed, not enabling auto-updates
+(node:9022) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+--- Claude Desktop Launcher Start ---
+Timestamp: 2025年  5月 24日 土曜日 05:24:11 JST
+Arguments: 
+Wayland detected
+Using local Electron: /usr/lib/claude-desktop/node_modules/electron/dist/electron
+Adding Wayland flags
+Changing directory to /usr/lib/claude-desktop
+Executing: "/usr/lib/claude-desktop/node_modules/electron/dist/electron" "/usr/lib/claude-desktop/app.asar --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland --enable-wayland-ime --wayland-text-input-version=3" ""
+getWindowArguments []
+claudeURLHandler /usr/lib/claude-desktop/app.asar
+TypeError: Invalid URL
+    at new URL (node:internal/url:818:25)
+    at mI (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:77:6691)
+    at App.<anonymous> (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:124:11568)
+    at App.emit (node:events:518:28)
+    at n.emit (/usr/lib/claude-desktop/app.asar/.vite/build/index.js:28:29445) {
+  code: 'ERR_INVALID_URL',
+  input: '/usr/lib/claude-desktop/app.asar'
+}
+App is not installed, not enabling auto-updates
+(node:14928) MaxListenersExceededWarning: Possible EventEmitter memory leak detected. 11 destroyed listeners added to [WebContents]. MaxListeners is 10. Use emitter.setMaxListeners() to increase limit
+(Use `electron --trace-warnings ...` to show where the warning was created)
+Electron exited with code: 0
+--- Claude Desktop Launcher End ---
